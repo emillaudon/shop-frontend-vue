@@ -1,9 +1,9 @@
+<script setup lang="js">
+import Mainlayout from "./layouts/MainLayout.vue";
+</script>
+
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <mainlayout />
 </template>
 
 <style>
