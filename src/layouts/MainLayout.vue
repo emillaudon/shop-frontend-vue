@@ -1,7 +1,18 @@
 <template>
   <section>
-    <h1>Produkter</h1>
+    <Topbar />
+    <NavBar />
   </section>
 </template>
 
-<script></script>
+<script>
+import NavBar from "@/components/layout/NavBar.vue";
+import Topbar from "@/components/layout/TopBar.vue";
+
+export default {
+  components: {
+    Topbar,
+    NavBar,
+  },
+};
+</script>
