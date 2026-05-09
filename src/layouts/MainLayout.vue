@@ -1,6 +1,6 @@
 <template>
   <section>
-    <Topbar />
+    <TopBar />
     <NavBar />
     <div class="main-area">
       <RouterView />
@@ -12,12 +12,12 @@
 <script>
 import CartSideBar from "@/components/layout/CartSideBar.vue";
 import NavBar from "@/components/layout/NavBar.vue";
-import Topbar from "@/components/layout/TopBar.vue";
+import TopBar from "@/components/layout/topbar.vue";
 import { RouterView } from "vue-router";
 
 export default {
   components: {
-    Topbar,
+    TopBar,
     NavBar,
     RouterView,
     CartSideBar,
