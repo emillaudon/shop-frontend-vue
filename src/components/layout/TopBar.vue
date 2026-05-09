@@ -10,7 +10,7 @@
   top: 0;
   height: 64px;
   width: 100%;
-  background-color: antiquewhite;
+  background-color: gray;
   display: flex;
   justify-content: space-between;
 }
