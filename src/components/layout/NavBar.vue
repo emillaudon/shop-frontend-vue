@@ -2,10 +2,10 @@
   <div class="navbar">
     <div class="inner-navbar">
       <p>Search bar</p>
-      <div class="center-navbar">
-        <button>All Products</button>
-        <button>My Orders</button>
-      </div>
+      <nav class="center-navbar">
+        <RouterLink to="/" class="nav-button">All Products</RouterLink>
+        <RouterLink to="/orders" class="nav-button">My Orders</RouterLink>
+      </nav>
       <button>Cart</button>
     </div>
   </div>
