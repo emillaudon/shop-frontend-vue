@@ -1,22 +1,34 @@
 <template>
   <section class="products">
     <div class="products-grid">
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
+      <ProductCard
+        v-for="product in productStore.products"
+        :key="product.id"
+        :product="product"
+      />
     </div>
   </section>
 </template>
 
 <script>
 import ProductCard from "@/components/ProductCard.vue";
+import { useProductStore } from "@/stores/productStore";
 
 export default {
   components: {
     ProductCard,
+  },
+
+  setup() {
+    const productStore = useProductStore();
+
+    return {
+      productStore,
+    };
+  },
+
+  async mounted() {
+    await this.productStore.fetchProducts();
   },
 };
 </script>

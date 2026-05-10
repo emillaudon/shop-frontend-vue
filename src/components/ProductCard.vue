@@ -1,15 +1,32 @@
 <template>
   <div class="product-card">
     <div class="inner-card">
-      <div class="image">
-        <p>Image</p>
-      </div>
-      <p>Item Name</p>
-      <p>Item Price</p>
+      <img
+        class="image"
+        :src="
+          (product.imageUrl ?? '/assets/product-placeholder.png') +
+          '?v=' +
+          product.id +
+          '-1'
+        "
+        :alt="product.name"
+      />
+      <p>{{ product.name }}</p>
+      <p>${{ product.price }}</p>
       <button class="buy-button">Buy</button>
     </div>
   </div>
 </template>
+<script>
+export default {
+  props: {
+    product: {
+      type: Object,
+      required: true,
+    },
+  },
+};
+</script>
 <style scoped>
 .product-card {
   background-color: white;
@@ -27,9 +44,9 @@
   line-height: 0;
 }
 .image {
-  background-color: aquamarine;
   width: 100%;
   height: 220px;
+  object-fit: cover;
 }
 .buy-button {
   margin-top: auto;

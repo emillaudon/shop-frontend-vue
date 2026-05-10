@@ -12,7 +12,7 @@
 <script>
 import CartSideBar from "@/components/layout/CartSideBar.vue";
 import NavBar from "@/components/layout/NavBar.vue";
-import TopBar from "@/components/layout/topbar.vue";
+import TopBar from "@/components/layout/TopBar.vue";
 import { RouterView } from "vue-router";
 
 export default {
